@@ -21,5 +21,3 @@ else:
 input("Test complete. Press Enter to close browser...")    
 
 
-# Close browser
-#driver.quit()
