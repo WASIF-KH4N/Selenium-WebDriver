@@ -1,0 +1,34 @@
+'''from selenium import webdriver
+from selenium.webdriver.common.by import By 
+driver=webdriver.Chrome()
+driver.get("https://testautomationpractice.blogspot.com/")
+driver.maximize_window()
+
+dropdown = driver.find_elements(By.XPATH, "//*[@id='country']/option")
+
+for opt in dropdown:
+    if opt.text=="France":
+        opt.click()
+        break
+
+input("Press Enter to close browser...")'''
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By 
+driver=webdriver.Chrome()
+driver.get("https://www.dummyticket.com/dummy-ticket-for-visa-application/")
+driver.maximize_window()
+
+
+driver.find_element(By.XPATH, "//*[@id='select2-billing_country-container']").click()   
+dropdown = driver.find_elements(By.XPATH, "//*[@id='select2-billing_country-results']/li")
+for opt in dropdown:
+    if opt.text=="Zambia":
+        opt.click()
+        break
+
+
+input("Press Enter to close browser...")
+
+
+
